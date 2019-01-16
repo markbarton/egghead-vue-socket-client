@@ -19,13 +19,11 @@
             <Message></Message>
           </v-flex>
         </v-layout>
-        <v-layout row mb-4></v-layout>
       </v-container>
     </v-content>
     <v-footer dark></v-footer>
     <Snackbar></Snackbar>
     <Dialog></Dialog>
-    <Binary></Binary>
   </v-app>
 </template>
 
@@ -35,7 +33,6 @@ import User from "@/components/User";
 import Message from "@/components/Message";
 import Snackbar from "@/components/Snackbar";
 import Dialog from "@/components/Dialog";
-import Binary from "@/components/Binary";
 
 export default {
   components: {
@@ -43,12 +40,7 @@ export default {
     User,
     Message,
     Snackbar,
-    Dialog,
-    Binary
-  },
-  data: () => ({
-    name: "",
-    group: ""
-  })
+    Dialog
+  }
 };
 </script>
