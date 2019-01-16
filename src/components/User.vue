@@ -5,12 +5,6 @@
       <div class="title font-weight-light text-md-left">User Profile
         <div class="caption text-md-right">{{socket_id}}</div>
       </div>
-      <v-alert
-        :value="server_success"
-        type="success"
-        icon="check_circle"
-        outline
-      >Server Updated with User Information.</v-alert>
       <v-container>
         <v-layout row wrap>
           <v-flex md6 xs12 class="pr-2">
@@ -44,7 +38,6 @@ export default {
     names: ["John Adams", "Judy Mason", "Amy Smith", "Jack White"],
     name: "",
     group: "",
-    server_success: false,
     socket_id: ""
   }),
 
@@ -68,11 +61,7 @@ export default {
       const user_data = {};
       user_data.name = this.name;
       user_data.group = this.group;
-      const self = this;
-      this.$socket.emit("UPDATE_USER", user_data, function() {
-        // Server has ack
-        self.server_success = true;
-      });
+      this.$socket.emit("UPDATE_USER", user_data);
     }
   }
 };
