@@ -7,11 +7,6 @@
     <v-content>
       <v-container fluid>
         <v-layout row mb-4>
-          <v-flex>
-            <Graph></Graph>
-          </v-flex>
-        </v-layout>
-        <v-layout row mb-4>
           <v-flex class="mx-1">
             <User></User>
           </v-flex>
@@ -28,7 +23,6 @@
 </template>
 
 <script>
-import Graph from "@/components/Graph";
 import User from "@/components/User";
 import Message from "@/components/Message";
 import Snackbar from "@/components/Snackbar";
@@ -36,7 +30,6 @@ import Dialog from "@/components/Dialog";
 
 export default {
   components: {
-    Graph,
     User,
     Message,
     Snackbar,
