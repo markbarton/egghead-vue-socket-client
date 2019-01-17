@@ -15,7 +15,6 @@ export default {
       this.dialog = true;
     }
   },
-
   data: () => ({
     dialog: false,
     image: ""
