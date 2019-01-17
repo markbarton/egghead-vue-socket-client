@@ -7,11 +7,6 @@
     <v-content>
       <v-container fluid>
         <v-layout row mb-4>
-          <v-flex>
-            <Graph></Graph>
-          </v-flex>
-        </v-layout>
-        <v-layout row mb-4>
           <v-flex class="mx-1">
             <User></User>
           </v-flex>
