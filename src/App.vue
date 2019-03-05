@@ -14,18 +14,18 @@
       </v-container>
     </v-content>
     <v-footer dark></v-footer>
-    <Snackbar></Snackbar>
+    <PopupMessage></PopupMessage>
   </v-app>
 </template>
 
 <script>
 import Graph from "@/components/Graph";
-import Snackbar from "@/components/Snackbar";
+import PopupMessage from "@/components/PopupMessage";
 
 export default {
   components: {
     Graph,
-    Snackbar
+    PopupMessage
   }
 };
 </script>
