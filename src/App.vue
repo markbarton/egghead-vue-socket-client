@@ -8,32 +8,29 @@
       <v-container fluid>
         <v-layout row mb-4>
           <v-flex class="mx-1">
-            <User></User>
+            <UserProfile></UserProfile>
           </v-flex>
           <v-flex>
-            <Message></Message>
+            <ComposeMessage></ComposeMessage>
           </v-flex>
         </v-layout>
-        </v-container>
+      </v-container>
     </v-content>
     <v-footer dark></v-footer>
-    <Snackbar></Snackbar>
+    <PopupMessage></PopupMessage>
   </v-app>
 </template>
 
 <script>
-import Graph from "@/components/Graph";
-import User from "@/components/User";
-import Message from "@/components/Message";
-import Snackbar from "@/components/Snackbar";
-
+import UserProfile from "@/components/UserProfile";
+import ComposeMessage from "@/components/ComposeMessage";
+import PopupMessage from "@/components/PopupMessage";
 
 export default {
   components: {
-    Graph,
-    User,
-    Message,
-    Snackbar
+    UserProfile,
+    ComposeMessage,
+    PopupMessage
   }
 };
 </script>
