@@ -34,10 +34,8 @@ export default {
   sockets: {
     connect: function() {
       this.socket_id = this.$socket.id;
+      this.readLocalUser();
     }
-  },
-  created() {
-    this.readLocalUser();
   },
   data: () => ({
     items: ["Alpha", "Beta", "Charlie"],

@@ -14,6 +14,12 @@ export default {
 
       // Display snackbar
       this.snackbar = true;
+    },
+    disconnect: function() {
+      this.notification_text = "CAUTION SERVER DISCONNECTED";
+      this.color = "red";
+      // Display snackbar
+      this.snackbar = true;
     }
   },
 
@@ -25,4 +31,3 @@ export default {
   })
 };
 </script>
-
