@@ -8,40 +8,28 @@
       <v-container fluid>
         <v-layout row mb-4>
           <v-flex class="mx-1">
-            <User></User>
-          </v-flex>
-          <v-flex>
-            <Message></Message>
+            <UserProfile></UserProfile>
           </v-flex>
         </v-layout>
         <v-layout row mb-4></v-layout>
       </v-container>
     </v-content>
     <v-footer dark></v-footer>
-    <Snackbar></Snackbar>
-    <Dialog></Dialog>
-    <Binary></Binary>
+    <PopupMessage></PopupMessage>
+    <Quiz></Quiz>
   </v-app>
 </template>
 
 <script>
-import User from "@/components/User";
-import Message from "@/components/Message";
-import Snackbar from "@/components/Snackbar";
-import Dialog from "@/components/Dialog";
-import Binary from "@/components/Binary";
+import UserProfile from "@/components/UserProfile";
+import PopupMessage from "@/components/PopupMessage";
+import Quiz from "@/components/Quiz";
 
 export default {
   components: {
-    User,
-    Message,
-    Snackbar,
-    Dialog,
-    Binary
-  },
-  data: () => ({
-    name: "",
-    group: ""
-  })
+    UserProfile,
+    PopupMessage,
+    Quiz
+  }
 };
 </script>
