@@ -2,7 +2,8 @@
   <v-card color="blue-grey darken-2" class="mx-auto white--text">
     <v-card-title primary-title>
       <v-icon large left dark>portrait</v-icon>
-      <div class="title font-weight-light text-md-left">User Profile
+      <div class="title font-weight-light text-md-left">
+        User Profile
         <div class="caption text-md-right">{{socket_id}}</div>
       </div>
       <v-container>
@@ -25,12 +26,12 @@
 
 <script>
 export default {
-  sockets: {
-    connect: function() {
-      this.socket_id = this.$socket.id;
-      this.readLocalUser();
+sockets: {
+    connect: function(){
+        this.socket_id = this.$socket.id;
+        this.readLocalUser();
     }
-  },
+}, 
   data: () => ({
     items: ["Alpha", "Beta", "Charlie"],
     names: ["John Adams", "Judy Mason", "Amy Smith", "Jack White"],
@@ -38,29 +39,26 @@ export default {
     group: "",
     socket_id: ""
   }),
-
   methods: {
-    readLocalUser() {
-      this.name = sessionStorage.name;
-      this.group = sessionStorage.group;
-      if (this.name || this.group) {
-        this.sendUserDetails();
-      }
-    },
-
-    saveUserDetails() {
-      // Save in local storage
-      sessionStorage.name = this.name;
-      sessionStorage.group = this.group;
-      // Send User Details to Server
-      this.sendUserDetails();
-    },
     sendUserDetails() {
       const user_data = {};
       user_data.name = this.name;
       user_data.group = this.group;
       this.$socket.emit("UPDATE_USER", user_data);
+    },
+    saveUserDetails() {
+        sessionStorage.name = this.name;
+        sessionStorage.group = this.group;
+        this.sendUserDetails();
+    },
+    readLocalUser() {
+        this.name = sessionStorage.name;
+        this.group = sessionStorage.group;
+        if (this.name || this.group){
+            this.sendUserDetails();
+        }
     }
+    
   }
 };
 </script>

@@ -9,10 +9,7 @@
         <v-layout row mb-4>
           <v-flex class="mx-1">
             <UserProfile></UserProfile>
-          </v-flex>
-          <v-flex>
-            <ComposeMessage></ComposeMessage>
-          </v-flex>
+           </v-flex>
         </v-layout>
       </v-container>
     </v-content>
@@ -22,15 +19,12 @@
 </template>
 
 <script>
-import UserProfile from "@/components/UserProfile";
-import ComposeMessage from "@/components/ComposeMessage";
 import PopupMessage from "@/components/PopupMessage";
-
+import UserProfile from "@/components/UserProfile";
 export default {
   components: {
-    UserProfile,
-    ComposeMessage,
-    PopupMessage
+    PopupMessage,
+    UserProfile
   }
 };
 </script>
